@@ -159,7 +159,14 @@ app.post('/extract-transcript', async (req, res) => {
     }
 
     try {
-        const browser = await puppeteer.launch({ headless: true });
+        const browser = await puppeteer.launch({
+            headless: true,
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+            executablePath: process.env.CHROME_BIN || puppeteer.executablePath(),
+            cacheDirectory: '/opt/render/.cache/puppeteer'
+        });
+        
+        
         const page = await browser.newPage();
 
         await page.goto(videoUrl, { waitUntil: 'networkidle2' });
@@ -238,7 +245,13 @@ app.post('/extract-transcript', async (req, res) => {
 
 
 async function savePageContentAsPdf(pageUrl, tempDir, index) {
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        executablePath: process.env.CHROME_BIN || puppeteer.executablePath(),
+        cacheDirectory: '/opt/render/.cache/puppeteer'
+    });
+    
     const page = await browser.newPage();
 
     try {
@@ -314,7 +327,13 @@ function filterUnsupportedCharacters(text) {
 
 
 async function getSubRouteLinks(pageUrl) {
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        executablePath: process.env.CHROME_BIN || puppeteer.executablePath(),
+        cacheDirectory: '/opt/render/.cache/puppeteer'
+    });
+    
     const page = await browser.newPage();
 
     try {
