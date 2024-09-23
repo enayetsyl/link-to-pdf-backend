@@ -10,8 +10,11 @@ const multer = require('multer');
 
 const app = express();
 const port = 3000;
-
-app.use(cors())
+const corsOptions = {
+    origin: 'http://localhost:5173',
+    optionsSuccessStatus: 200 // Some legacy browsers choke on 204
+  };
+  app.use(cors(corsOptions));
 app.use(bodyParser.json());
 // Your routes here
 app.get('/', (req, res) => {
