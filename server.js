@@ -13,6 +13,10 @@ const port = 3000;
 
 app.use(cors())
 app.use(bodyParser.json());
+// Your routes here
+app.get('/', (req, res) => {
+    res.send('CORS enabled for all origins');
+  });
 
 
 const storage = multer.diskStorage({
