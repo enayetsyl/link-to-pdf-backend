@@ -67,5 +67,5 @@ async function savePageContentAsPdf(pageUrl) {
 }
 
 // Example usage:
-const pageUrl = 'https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API';
+const pageUrl = 'https://socialbu.com/developers/docs';
 savePageContentAsPdf(pageUrl);

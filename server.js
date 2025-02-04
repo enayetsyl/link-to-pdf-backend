@@ -44,6 +44,11 @@ const upload = multer({
 
 
 app.post('/merge-pdf', upload.array('pdfs', 100), async (req, res) => {
+    console.log('Received files:', req.files);
+    if (!req.files || req.files.length === 0) {
+        console.error('No files uploaded');
+        return res.status(400).json({ error: 'No PDF files uploaded' });
+    }
     try {
         // Log files information for debugging
         console.log('Uploaded files:', req.files);
@@ -152,7 +157,7 @@ app.post('/generate-pdf', async (req, res) => {
         console.error(error);
         res.status(500).send('Error generating or merging PDF files');
     }
-});
+})
 
 app.post('/extract-transcript', async (req, res) => {
     const { videoUrl, videoTitle } = req.body;
