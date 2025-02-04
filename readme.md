@@ -172,3 +172,17 @@ This project is licensed under the **ISC License**.
 ## Contributions
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
+## 🏆 **Author:** Md Enayetur Rahman
+
+### Contact Information
+- [LinkedIn](https://www.linkedin.com/in/md-enayetur-rahman/)
+- [Facebook](https://www.facebook.com/profile.php?id=100094416483981)
+- [X (Twitter)](https://x.com/enayetu_syl)
+- [YouTube](https://www.youtube.com/@MdEnayeturRahman)
+- [GitHub](https://github.com/enayetsyl/)
+- [Medium](https://medium.com/@enayetflweb)
+- [dev.to](https://dev.to/md_enayeturrahman_2560e3)
+- [Leetcode](https://leetcode.com/u/XTl7hvNPIc/)
+- [Hackerrank](https://www.hackerrank.com/profile/enayetflweb)
+- [Codeforces](https://codeforces.com/profile/enayetsyl)
+- [Email](mailto:enayetflweb@gmail.com)
